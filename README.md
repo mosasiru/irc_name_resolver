@@ -12,7 +12,7 @@ register Benny Benjamin
 nick? Benjamin
 # inr_bot: "Benjamin's nickname: Ben,Benny"
 
-real? mosa  # yusuke.enomoto
+real? Ben
 # inr_bot: "Ben's realname: Benjamin"
 
 unregister Ben Benjamin

@@ -1,23 +1,38 @@
+#USAGE
+
+on your IRC client,
+
+```
+register Ben Benjamin
+# inr_bot "registerd: nick(Ben) => real(Benjamin)"
+
+register Benny Benjamin
+# inr_bot "registerd: nick(Benny) => real(Benjamin)"
+
+nick? Benjamin
+# inr_bot: "Benjamin's nickname: Ben,Benny"
+
+real? mosa  # yusuke.enomoto
+# inr_bot: "Ben's realname: Benjamin"
+
+unregister Ben Benjamin
+# inr_bot: "unregistered: nick(Ben) => real(Benjamin)"
+
+```
+
+you can register multipul nicknames to one realname.
+
 #INSTALATION
 
 ```
-
 bundle install
-
-ruby irc_bot.rb
-
+mysql -u {admin} -p{password} < init.sql
 ```
 
-#HOW_TO_USE
+modify config.yaml.
 
-on IRC...
+#RUN
 
 ```
-register mosa yusuke.enomoto
-
-nick? yusuke.enomoto # mosa
-real? mosa  # yusuke.enomoto
-
-unregister mosa yusuke.enomoto
-
+ruby run.rb
 ```

@@ -1,0 +1,12 @@
+:irc: 
+  :server: irc.freenode.net
+  :channels:
+    - '#hogemoge'
+  :nick: inr_bot
+  :realname: inr_bot
+  :user: inr_bot
+:mysql:
+  :host     : localhost
+  :username : root
+  :password : ''
+  :database : irc_resolver

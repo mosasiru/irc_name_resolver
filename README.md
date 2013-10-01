@@ -12,10 +12,12 @@ ruby irc_bot.rb
 
 on IRC...
 
+```
 register mosa yusuke.enomoto
 
-nick? mosa  # yusuke.enomoto
-
-real? # mosa
+nick? yusuke.enomoto # mosa
+real? mosa  # yusuke.enomoto
 
 unregister mosa yusuke.enomoto
+
+```

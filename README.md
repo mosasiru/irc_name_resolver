@@ -18,6 +18,12 @@ real? mosa  # yusuke.enomoto
 unregister Ben Benjamin
 # inr_bot: "unregistered: nick(Ben) => real(Benjamin)"
 
+ping
+# inr_bot: "pong"
+
+how
+# show usage.
+
 ```
 
 you can register multipul nicknames to one realname.

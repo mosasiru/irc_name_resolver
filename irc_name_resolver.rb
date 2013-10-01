@@ -17,8 +17,11 @@ class IRCNameResolver
 
       on :message, /^register/ do |m|
         (command, nickname, realname) = m.message.split("\s")
-        mysql_client.insert(nickname, realname)
-        m.reply("registerd: nick(#{nickname}) => real(#{realname})")
+        if mysql_client.insert(nickname, realname)
+          m.reply("registerd: nick(#{nickname}) => real(#{realname})")
+        else
+          m.reply("already registerd: nick(#{nickname}) => real(#{realname})")
+        end
       end
 
       on :message, /^unregister/ do |m|
@@ -26,6 +29,7 @@ class IRCNameResolver
         if mysql_client.delete(nickname, realname)
           m.reply("unregistered: nick(#{nickname}) => real(#{realname})")
         else
+          m.reply("not exists: nick(#{nickname}) => real(#{realname})")
 
         end
       end
